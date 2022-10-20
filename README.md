@@ -45,5 +45,3 @@ You can reference src/utils/form-presets.js for some form field templates. Below
 
 - Refactor ChoiceField checkbox section to support multiple fields and errors that can be tracked on submision
 - Using Material icons instead of Iconify
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
