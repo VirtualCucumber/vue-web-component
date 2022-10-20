@@ -1,4 +1,4 @@
-# :pencil2: Vue WebForm Component
+# :package: Vue WebForm Component
 
 ```sh
 npm install
