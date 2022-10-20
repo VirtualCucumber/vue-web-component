@@ -73,4 +73,10 @@ export const registrationFormFields = {
         ],
         options: ["pizza", "steak", "vietnamese"],
     },
+    consent: {
+        type: "checkbox",
+        label: "Consent",
+        required: true,
+        options: ["Consent"],
+    },
 };

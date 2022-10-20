@@ -12,7 +12,6 @@
   >
     <component
       v-for="(field, key) in fields" :key="key"
-      :ref="setFieldRef"
       v-model="data[key]"
       :label="field.label"
       :required="field.required"
@@ -22,7 +21,6 @@
       :icon="field.icon"
       :rules="field.rules"
       :is="componentTypeMap[field.type]"
-      class="my-4"
     />
     <v-btn 
       :append-icon="submitIcon"

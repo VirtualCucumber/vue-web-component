@@ -1,8 +1,10 @@
 <template>
   <v-radio-group 
+    v-if="type === 'radio'"
     :label="label"
     :required="required"
     :rules="rules" 
+    v-bind="$attrs"
     @update:modelValue="(value) => $emit('update:modelValue', value)"
   >
     <v-radio 
@@ -12,6 +14,15 @@
       :value="option">
     </v-radio>
   </v-radio-group>
+    <v-checkbox
+    v-else
+    v-for="option in options"
+    v-bind:key="option"
+    :label="option"
+    :required="required"
+    :rules="[]"
+    @click="(e) => $emit('update:modelValue', e.target.checked)"
+  ></v-checkbox>
 </template>
 
 <script setup>

@@ -1,35 +1,44 @@
-# tech-web-component
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+# :pencil2: Vue WebForm Component
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## About
 
-```sh
-npm run build
+Uses one component for entry as WebComponent that takes in:
+
+- fields : array
+- heading : string
+- onSubmit : function
+- submitLabel : string
+- submitIcon : string
+
+## Field Object Schema
+
+You can reference src/utils/form-presets.js for some form field templates. Below shows all the available fields for a field object:
+
+```
+{
+    type: "email",
+    label: "Email",
+    icon: "mdi-account",
+    required: true,
+    rules: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+    ],
+    options: { // If type has multiple like select, checkbox, or radio }
+}
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Known Problems
 
-```sh
-npm run lint
-```
+- Refactor ChoiceField checkbox section to support multiple fields and errors that can be tracked on submision
+- Using Material icons instead of Iconify
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).

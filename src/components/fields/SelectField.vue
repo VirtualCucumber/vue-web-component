@@ -4,6 +4,7 @@
     :items="options"
     :rules="rules"
     :required="required"
+    v-bind="$attrs"
     @update:modelValue="(value) => $emit('update:modelValue', value)"
     variant="solo"
   />

@@ -20,7 +20,7 @@ export const FormFieldProps = Object.freeze({
     default: false,
   },
   modelValue: {
-    type: String,
-    default: "",
+    type: [String, Boolean],
+    default: false,
   },
 });
