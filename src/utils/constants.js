@@ -5,15 +5,15 @@
 export const FormFieldProps = Object.freeze({
   label: {
     type: String,
-    default: '',
+    default: "",
   },
   icon: {
     type: String,
-    default: '',
+    default: "",
   },
   rules: {
     type: Array,
-    default: [v => !!v || 'Field is required'],
+    default: [(v) => !!v || "Field is required"],
   },
   required: {
     type: Boolean,

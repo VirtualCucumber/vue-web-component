@@ -1,17 +1,11 @@
 <template>
-  <div 
-    v-if="heading"
-    class="font-weight-thin text-h3 my-4">
-      {{ heading }}
+  <div v-if="heading" class="font-weight-thin text-h3 my-4">
+    {{ heading }}
   </div>
-  <v-form
-    ref="form"
-    @submit="onSubmit"
-    novalidate
-    class="mb-16"
-  >
+  <v-form ref="form" @submit="onSubmit" novalidate class="mb-16">
     <component
-      v-for="(field, key) in fields" :key="key"
+      v-for="(field, key) in fields"
+      :key="key"
       v-model="data[key]"
       :label="field.label"
       :required="field.required"
@@ -22,10 +16,7 @@
       :rules="field.rules"
       :is="componentTypeMap[field.type]"
     />
-    <v-btn 
-      :append-icon="submitIcon"
-      type="submit"
-    >
+    <v-btn :append-icon="submitIcon" type="submit">
       {{ submitLabel }}
     </v-btn>
   </v-form>
@@ -55,11 +46,11 @@ const props = defineProps({
   },
   submitLabel: {
     type: String,
-    default: 'Submit',
+    default: "Submit",
   },
   submitIcon: {
     type: String,
-    default: '',
+    default: "",
   },
 });
 

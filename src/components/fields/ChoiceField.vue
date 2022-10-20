@@ -1,20 +1,21 @@
 <template>
-  <v-radio-group 
+  <v-radio-group
     v-if="type === 'radio'"
     :label="label"
     :required="required"
-    :rules="rules" 
+    :rules="rules"
     v-bind="$attrs"
     @update:modelValue="(value) => $emit('update:modelValue', value)"
   >
-    <v-radio 
-      v-for="option in options" 
-      v-bind:key="option" 
+    <v-radio
+      v-for="option in options"
+      v-bind:key="option"
       :label="option"
-      :value="option">
+      :value="option"
+    >
     </v-radio>
   </v-radio-group>
-    <v-checkbox
+  <v-checkbox
     v-else
     v-for="option in options"
     v-bind:key="option"
