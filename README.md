@@ -8,6 +8,11 @@ npm install
 npm run dev
 ```
 
+## Packages Used
+
+- Lodash (object utils)
+- Vuetify (material design)
+
 ## About
 
 Uses one component for entry as WebComponent that takes in:
