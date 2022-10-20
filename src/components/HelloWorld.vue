@@ -37,14 +37,14 @@ const registrationForm = ref(null);
 
 function submitLogin(e) {
   e.preventDefault();
-  loginForm.value.form.resetValidation();
+  loginForm.value.form.validate();
 
   // Logic after validation pass
 }
 
 function submitRegistration(e) {
   e.preventDefault();
-  registrationForm.value.form.resetValidation();
+  registrationForm.value.form.validate();
 
   // Logic after validation pass
 }
