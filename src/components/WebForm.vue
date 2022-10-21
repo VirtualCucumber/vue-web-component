@@ -61,10 +61,19 @@ defineExpose({
 });
 
 onMounted(() => {
+  generateFieldData();
+});
+
+/**
+ * Populates the data field with the value of a field and maps it to the
+ * field's key be used like so:
+ * form.value.data.fieldKey
+ */
+function generateFieldData() {
   _.keys(props.fields).forEach((key) => {
     data.value[key] = "";
   });
-});
+}
 
 /**
  * Will reset all field values
