@@ -17,7 +17,7 @@ npm run dev
 
 Uses one component for entry as WebComponent that takes in:
 
-- fields : array
+- fields : object
 - heading : string
 - onSubmit : function
 - submitLabel : string
