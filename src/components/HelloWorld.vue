@@ -40,6 +40,8 @@ function submitLogin(e) {
   loginForm.value.form.validate();
 
   // Logic after validation pass
+  // Access field data like so:
+  // registrationForm.value.data.consent
 }
 
 function submitRegistration(e) {
@@ -47,5 +49,7 @@ function submitRegistration(e) {
   registrationForm.value.form.validate();
 
   // Logic after validation pass
+  // Access field data like so:
+  // registrationForm.value.data.consent
 }
 </script>
