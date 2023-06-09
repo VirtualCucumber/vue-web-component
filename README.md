@@ -1,4 +1,5 @@
 # :package: Vue WebForm Component
+<img width="1055" alt="image" src="https://github.com/ianmcelvain/vue-web-form-component/assets/45335671/2e705a9a-19a2-4b20-8d62-94e0758539b8">
 
 ```sh
 npm install
